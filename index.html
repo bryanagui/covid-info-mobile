@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+  <title>
+    Soft UI Dashboard by Creative Tim
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet" />
+  <!-- Nucleo Icons -->
+  <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+  <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link id="pagestyle" href="./assets/css/soft-ui-css.css" rel="stylesheet" />
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+</head>
+
+<body class="dark-version bg-gray-600">
+  <main class="main-content position-relative max-height-vh-100 h-100 mt-4 border-radius-lg">
+    <!-- Navbar -->
+    <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 border-radius-xl shadow-none">
+      <div class="container-fluid py-1 px-1">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb bg-transparent mb-0 pb-0 pt-1 px-0 me-sm-6 me-5">
+            <li class="breadcrumb-item text-sm"><a class="opacity-5 text-white" href="javascript:;">Pages</a></li>
+            <li class="breadcrumb-item text-sm text-white active" aria-current="page">Facilities</li>
+          </ol>
+          <h6 class="font-weight-bolder text-white mb-0">List of Health Facilities</h6>
+        </nav>
+      </div>
+    </nav>
+    <!-- End Navbar -->
+    
+    <div class="container-fluid py-3">
+      <div class="row mb-2">
+        <div class="col-8">
+          <span class="text-xs opacity-7">Last Updated: <script>
+            var currentdate = new Date();
+            var datetime = (currentdate.getMonth()+1) + "/"
+                + currentdate.getDate()  + "/" 
+                + currentdate.getFullYear() + " | "  
+                + currentdate.getHours() + ":"  
+                + (currentdate.getMinutes()<10?'0':'') + currentdate.getMinutes() + ":" 
+                + (currentdate.getSeconds()<10?'0':'') + currentdate.getSeconds()
+            document.write(datetime); 
+          </script></span>
+        </div>
+        <div class="col-4 mt-1">
+          <span onClick="window.location.href=window.location.href" class="text-xs opacity-7 float-end"><span class="fa fa-redo"></span>&nbsp;&nbsp;&nbsp;Refresh</span>
+        </div>
+      </div>
+      <div class="row g-2">
+        <p class="text-sm mb-0 text-capitalize font-weight-bolder">COVID-19 Hotline</p>
+        <img src="assets/img/90338964_1272407636291618_8693230333585260544_n.jpg" class="border-radius-lg"/>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility0.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Allied Care Experts (ACE) Medical Center</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Baliuag, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10" id="facility-occupancy-0">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility1.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Baliuag District Hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Baliuag, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-1">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility2.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Brigino General Hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> San Jose Del Monte, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-2">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility3.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Bulacan Medical Center</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Malolos, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-3">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility4.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Bulacan Medical Mission Group Pharmacy and Hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Bocaue, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-4">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility5.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Calumpit District Hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Calumpit, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-5">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility6.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Castro Maternity Hospital and Medical Center</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Baliuag, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-6">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility7.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">De Jesus General Hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Baliuag, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-7">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility8.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Divine Word Hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Hagonoy, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-8">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility9.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Dr. Cabuco Hospital</p>
+                      <p class="text-sm mb-0 text-capitalize">Santa Maria, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-9">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility10.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Dr. Peralta Hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Plaridel, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-10">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility11.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Dr. Yanga's Hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Bocaue, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-11">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility12.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Emilio G. Perez Memorial Hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Hagonoy, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-12">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility13.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Emmanuel Hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> San Miguel, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-13">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility14.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">Grace General Hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> San Jose Del Monte, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-14">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility15.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">graman medical center and maternity hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Malolos Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-15">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility16.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">gregorio del pilar district hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Guiguinto, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-16">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility17.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">guiguinto polymedic hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Bulakan, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-17">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility18.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">kairos maternity and general hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> San Jose Del Monte, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-18">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility19.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">la consolacion university general hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Plaridel, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-19">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility20.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">m.s. magbitang ospital ng san ildefonso</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> San Ildefonso, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-20">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility21.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">malolos maternity hospital and eye center</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Malolos, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-21">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility22.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">malolos san vicente hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Malolos, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-22">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility23.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">marcelo hospital of baliwag</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Baliuag, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-23">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility24.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">marcelo-padilla children's medical hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Plaridel, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-24">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility25.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">marilao st. michael family hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Marilao, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-25">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility26.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">mary immaculate maternity and general hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Malolos, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-26">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility27.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">marymount hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Meycauayan, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-27">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility28.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">mateo-mabborang general hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Hagonoy, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-28">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility29.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">mateo's diagnostic clinic and general hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Santa Maria, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-29">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility30.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">melvery maternity and general hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Plaridel, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-30">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility31.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">mendoza general hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Santa Maria, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-31">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility32.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">meycauayan doctors hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Meycauayan, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-32">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility33.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">mt. carmel medical center of bulacan</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Bocaue, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-33">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility34.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">nazarenus college foundation hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Marilao, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-34">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility35.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">norzagaray municipal hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Norzagaray, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-35">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility36.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">ofelia l. mendoza maternity and general hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Malolos, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-36">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility37.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">ospital ng guiguinto</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Guiguinto, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-37">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility38.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">ospital ng lungsod ng san jose del monte</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> San Jose Del Monte, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-38">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility39.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">our lady of mercy general hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Pulilan, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-39">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility40.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">qualimed health network sjdm</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> San Jose Del Monte, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-40">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility41.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">r de c galvez medical center</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> San Ildefonso, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-41">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility42.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">reina del cielo maternity and general hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Pulilan, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-42">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility43.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">rogaciano m. mercado memorial hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Santa Maria, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-43">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility44.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">romel cruz hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Malolos, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-44">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility45.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">rugay general hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Baliuag, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-45">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility46.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">sacred heart hospital of malolos</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Malolos, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-46">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility47.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">sagrada familia hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Baliuag, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-47">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility48.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">san miguel district hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> San Miguel, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-48">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility49.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">san pascual baylon maternity and general hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Paombong, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-49">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility50.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">santissima trinidad hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Malolos, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-50">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility51.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">santos general hospital of malolos</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Malolos, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-51">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility52.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">skyline hospital and medical center</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> San Jose Del Monte, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-52">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility53.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">snh bustos corporation</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Bustos, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-53">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility54.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">st. paul hospital bulacan</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Bocaue, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-54">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility55.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">sta. cruz multispecialty hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Calumpit, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-55">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility56.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">the lord's hospital</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Meycauayan, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-56">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="row g-2">
+        <a href="/pages/facility57.html">
+          <div class="col-12 mb-2">
+            <div class="card">
+              <div class="card-body p-3">
+                <div class="row">
+                  <div class="col-2 my-auto d-sm-flex d-block">
+                    <div class="icon icon-shape bg-gradient-dark shadow text-center border-radius-md">
+                      <i class="fa fa-clinic-medical text-md opacity-8" aria-hidden="true"></i>
+                    </div>
+                  </div>
+                  <div class="col-10 flex-start">
+                      <p class="text-sm mb-0 text-capitalize font-weight-bolder">united balagtas doctors hospital corporation</p>
+                      <p class="text-sm mb-0 text-capitalize"><span class="font-weight-bolder">Location: </span> Balagtas, Bulacan</p>
+                      <p class="text-md mb-0 text-capitalize font-weight-bolder opacity-8">Occupancy Rate: <span class="badge badge-pill badge-md bg-danger opacity-10"  id="facility-occupancy-57">Loading...</span></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+      <!-- footer -->
+      <footer class="footer pt-3  ">
+        <div class="container-fluid">
+          <div class="row align-items-center justify-content-lg-between">
+            <div class="col-lg-6 mb-lg-0 mb-4">
+              <div class="copyright text-center text-sm text-muted text-lg-start">
+                © <script>
+                  document.write(new Date().getFullYear())
+                </script>,
+                Software Design Project for A.Y. 2021-2022 (BSCPE -3A)
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </main>
+  <!--   Core JS Files   -->
+  <script src="./assets/js/core/popper.min.js"></script>
+  <script src="./assets/js/core/bootstrap.min.js"></script>
+  <script src="./assets/js/plugins/chartjs.min.js"></script>
+  <script>
+    var win = navigator.platform.indexOf('Win') > -1;
+    if (win && document.querySelector('#sidenav-scrollbar')) {
+      var options = {
+        damping: '0.5'
+      }
+      Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+    }
+  </script>
+  <!-- Github buttons -->
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <!-- Control Center for Soft Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="./assets/js/soft-ui-dashboard.min.js?v=1.0.3"></script>
+
+  <script>
+    $(document).ready(function () {
+      fetch("https://covid19-api-philippines.herokuapp.com/api/facilities")
+        .then((result) => result.json())
+        .then((json) => {
+            var dataArr = [json.data.filter((x) => x.province === "bulacan")];
+            function getOccupancyRate(i){
+              var result = ((dataArr[0][i].icu_o + dataArr[0][i].isolbed_o + dataArr[0][i].beds_ward_o) /
+                          (dataArr[0][i].icu_v +
+                            dataArr[0][i].isolbed_v +
+                            dataArr[0][i].beds_ward_v +
+                            dataArr[0][i].icu_o +
+                            dataArr[0][i].isolbed_o +
+                            dataArr[0][i].beds_ward_o) *
+                          100);
+              if(!(result >= 0)) {
+                return "UNAVAILABLE";
+              }
+              else if(result == 100){
+                return result.toFixed(2) + "% (FULL)"
+              }
+              return result.toFixed(2) + "%"
+            }
+            $("#facility-occupancy-0").text(getOccupancyRate(0));
+            $("#facility-occupancy-1").text(getOccupancyRate(1));
+            $("#facility-occupancy-2").text(getOccupancyRate(2));
+            $("#facility-occupancy-3").text(getOccupancyRate(3));
+            $("#facility-occupancy-4").text(getOccupancyRate(4));
+            $("#facility-occupancy-5").text(getOccupancyRate(5));
+            $("#facility-occupancy-6").text(getOccupancyRate(6));
+            $("#facility-occupancy-7").text(getOccupancyRate(7));
+            $("#facility-occupancy-8").text(getOccupancyRate(8));
+            $("#facility-occupancy-9").text(getOccupancyRate(9));
+            $("#facility-occupancy-10").text(getOccupancyRate(10));
+            $("#facility-occupancy-11").text(getOccupancyRate(11));
+            $("#facility-occupancy-12").text(getOccupancyRate(12));
+            $("#facility-occupancy-13").text(getOccupancyRate(13));
+            $("#facility-occupancy-14").text(getOccupancyRate(14));
+            $("#facility-occupancy-15").text(getOccupancyRate(15));
+            $("#facility-occupancy-16").text(getOccupancyRate(16));
+            $("#facility-occupancy-17").text(getOccupancyRate(17));
+            $("#facility-occupancy-18").text(getOccupancyRate(18));
+            $("#facility-occupancy-19").text(getOccupancyRate(19));
+            $("#facility-occupancy-20").text(getOccupancyRate(20));
+            $("#facility-occupancy-21").text(getOccupancyRate(21));
+            $("#facility-occupancy-22").text(getOccupancyRate(22));
+            $("#facility-occupancy-23").text(getOccupancyRate(23));
+            $("#facility-occupancy-24").text(getOccupancyRate(24));
+            $("#facility-occupancy-25").text(getOccupancyRate(25));
+            $("#facility-occupancy-26").text(getOccupancyRate(26));
+            $("#facility-occupancy-27").text(getOccupancyRate(27));
+            $("#facility-occupancy-28").text(getOccupancyRate(28));
+            $("#facility-occupancy-29").text(getOccupancyRate(29));
+            $("#facility-occupancy-30").text(getOccupancyRate(30));
+            $("#facility-occupancy-31").text(getOccupancyRate(31));
+            $("#facility-occupancy-32").text(getOccupancyRate(32));
+            $("#facility-occupancy-33").text(getOccupancyRate(33));
+            $("#facility-occupancy-34").text(getOccupancyRate(34));
+            $("#facility-occupancy-35").text(getOccupancyRate(35));
+            $("#facility-occupancy-36").text(getOccupancyRate(36));
+            $("#facility-occupancy-37").text(getOccupancyRate(38));
+            $("#facility-occupancy-38").text(getOccupancyRate(39));
+            $("#facility-occupancy-39").text(getOccupancyRate(40));
+            $("#facility-occupancy-40").text(getOccupancyRate(41));
+            $("#facility-occupancy-41").text(getOccupancyRate(42));
+            $("#facility-occupancy-42").text(getOccupancyRate(43));
+            $("#facility-occupancy-43").text(getOccupancyRate(44));
+            $("#facility-occupancy-44").text(getOccupancyRate(45));
+            $("#facility-occupancy-45").text(getOccupancyRate(46));
+            $("#facility-occupancy-46").text(getOccupancyRate(47));
+            $("#facility-occupancy-47").text(getOccupancyRate(48));
+            $("#facility-occupancy-48").text(getOccupancyRate(49));
+            $("#facility-occupancy-49").text(getOccupancyRate(50));
+            $("#facility-occupancy-50").text(getOccupancyRate(51));
+            $("#facility-occupancy-51").text(getOccupancyRate(52));
+            $("#facility-occupancy-52").text(getOccupancyRate(53));
+            $("#facility-occupancy-53").text(getOccupancyRate(54));
+            $("#facility-occupancy-54").text(getOccupancyRate(55));
+            $("#facility-occupancy-55").text(getOccupancyRate(56));
+            $("#facility-occupancy-56").text(getOccupancyRate(57));
+            $("#facility-occupancy-57").text(getOccupancyRate(58));
+        });
+    });
+  </script>
+</body>
+
+</html>
